@@ -119,7 +119,7 @@ $(document).ready(function() {
             // url: requestUrl + '?' + $.param({
             //     id: taskId
             // }),
-            url: requestUrl + '/' + id,
+            url: requestUrl + '/' + taskId,
             method: 'DELETE',
             success: function() {
                 parentEl.slideUp(400, function() { parentEl.remove(); });
