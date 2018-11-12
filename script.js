@@ -1,10 +1,9 @@
 $(document).ready(function() {
 
-    //dla zadania 24.2
     var apiRoot = 'https://limitless-beyond-71855.herokuapp.com/v1/tasks/';
     const trelloApiRoot = 'https://limitless-beyond-71855.herokuapp.com/v1/trello/';
 
-    //dla zadania 24.4
+    //dla zadania 24.2
     //var apiRoot = 'http://localhost:8080/v1/';
     //const trelloApiRoot = 'http://localhost:8080/v1/trello/';
     const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
@@ -70,7 +69,7 @@ $(document).ready(function() {
 
     function getAllTasks() {
         //const requestUrl = apiRoot + 'getTasks';
-        const requestUrl = apiRoot + 'tasks';
+        const requestUrl = apiRoot;
         $.ajax({
             url: requestUrl,
             method: 'GET',
@@ -91,7 +90,7 @@ $(document).ready(function() {
         var taskTitle = parentEl.find('[data-task-name-input]').val();
         var taskContent = parentEl.find('[data-task-content-input]').val();
         //var requestUrl = apiRoot + 'updateTask';
-        var requestUrl = apiRoot + 'tasks';
+        var requestUrl = apiRoot;
         $.ajax({
             url: requestUrl,
             method: "PUT",
@@ -115,7 +114,7 @@ $(document).ready(function() {
         var parentEl = $(this).parents('[data-task-id]');
         var taskId = parentEl.attr('data-task-id');
         //var requestUrl = apiRoot + 'deleteTask';
-        var requestUrl = apiRoot + 'tasks';
+        var requestUrl = apiRoot;
         $.ajax({
             // url: requestUrl + '?' + $.param({
             //     id: taskId
@@ -135,7 +134,7 @@ $(document).ready(function() {
         var taskContent = $(this).find('[name="content"]').val();
 
         //var requestUrl = apiRoot + 'createTask';
-        var requestUrl = apiRoot + 'tasks';
+        var requestUrl = apiRoot;
 
         $.ajax({
             url: requestUrl,
